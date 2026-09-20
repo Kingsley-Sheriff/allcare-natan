@@ -1,0 +1,273 @@
+/*
+=========================================
+SIGNUP PAGE
+=========================================
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
+
+.signup-page{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 520px;
+    min-height:100vh;
+}
+
+.signup-left{
+    background:#1c2b5c;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:80px;
+}
+
+.signup-left h1{
+    font-size:58px;
+    margin-bottom:25px;
+}
+
+.signup-left p{
+    font-size:21px;
+    line-height:1.8;
+    max-width:620px;
+}
+
+.signup-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:white;
+    padding:50px;
+}
+
+.signup-card{
+    width:100%;
+    max-width:420px;
+}
+
+.signup-card h2{
+    margin-bottom:35px;
+    color:#1c2b5c;
+    font-size:32px;
+}
+
+.signup-card input{
+    width:100%;
+    padding:16px;
+    margin-bottom:18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    transition:.25s;
+}
+
+.signup-card input:focus{
+    outline:none;
+    border-color:#1c2b5c;
+    box-shadow:0 0 0 4px rgba(28,43,92,.12);
+}
+
+.checkbox{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+    align-items:flex-start;
+    line-height:1.4;
+    color:#555;
+    font-size:15px;
+}
+
+.checkbox input{
+    width:auto;
+    margin:2px 0 0;
+    flex:0 0 auto;
+}
+
+.signup-btn{
+    width:100%;
+    padding:17px;
+    border:none;
+    border-radius:10px;
+    background:#1c2b5c;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:16px;
+    transition:.3s;
+}
+
+.signup-btn:hover{
+    background:#314b96;
+}
+
+.login-link{
+    margin-top:30px;
+    text-align:center;
+}
+
+/*
+=========================================
+RESPONSIVE
+=========================================
+*/
+
+@media(max-width:1100px){
+    .signup-page{
+        grid-template-columns:minmax(0,1fr) 460px;
+    }
+
+    .signup-left{
+        padding:50px;
+    }
+
+    .signup-left h1{
+        font-size:50px;
+    }
+
+    .signup-left p{
+        font-size:19px;
+    }
+
+    .signup-right{
+        padding:45px 35px;
+    }
+}
+
+@media(max-width:900px){
+    .signup-page{
+        display:block;
+        min-height:100vh;
+    }
+
+    .signup-left{
+        display:none;
+    }
+
+    .signup-right{
+        min-height:100vh;
+        padding:40px 24px 50px;
+        align-items:flex-start;
+    }
+
+    .signup-card{
+        max-width:520px;
+        margin:0 auto;
+    }
+}
+
+@media(max-width:480px){
+    .signup-right{
+        padding:30px 16px 40px;
+    }
+
+    .signup-card h2{
+        font-size:28px;
+        margin-bottom:28px;
+    }
+
+    .signup-card input{
+        padding:15px;
+        margin-bottom:16px;
+    }
+
+    .checkbox{
+        font-size:14px;
+        margin:18px 0;
+    }
+
+    .signup-btn{
+        padding:16px;
+    }
+}
+
+/*
+=========================================
+PROFESSIONAL NOTIFICATIONS
+=========================================
+*/
+
+#notificationContainer {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: min(420px, calc(100vw - 48px));
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+.notification {
+    position: relative;
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateX(40px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-success {
+    background: #198754;
+}
+
+.notification-error {
+    background: #dc3545;
+}
+
+.notification-warning {
+    background: #f59e0b;
+}
+
+.notification-info {
+    background: #2563eb;
+}
+
+
+/*
+=========================================
+MOBILE NOTIFICATIONS
+=========================================
+*/
+
+@media (max-width: 600px) {
+
+    #notificationContainer {
+        top: 16px;
+        right: 16px;
+        width: calc(100vw - 32px);
+    }
+
+    .notification {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+}

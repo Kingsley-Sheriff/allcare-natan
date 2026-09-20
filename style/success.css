@@ -1,0 +1,170 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#eef3f8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.success-card{
+
+    width:650px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.success-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#28a745;
+
+    color:white;
+
+    font-size:46px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.success-card h1{
+
+    color:#1c2b5c;
+
+    margin-bottom:15px;
+
+}
+
+.success-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+
+}
+
+.receipt{
+
+    text-align:left;
+
+    border-top:1px solid #eee;
+
+    border-bottom:1px solid #eee;
+
+    padding:30px 0;
+
+    margin-bottom:35px;
+
+}
+
+.receipt-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:14px 0;
+
+}
+
+.button-group{
+
+    display:grid;
+
+    gap:15px;
+
+}
+
+.primary-btn{
+
+    padding:16px;
+
+    background:#1c2b5c;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.secondary-btn{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#edf2ff;
+
+    color:#1c2b5c;
+
+}
+
+.primary-btn:hover{
+
+    background:#314b96;
+
+}
+
+.secondary-btn:hover{
+
+    background:#dfe8ff;
+
+}
+
+@media(max-width:700px){
+
+    .success-card{
+
+        width:95%;
+
+        padding:35px;
+
+    }
+
+}

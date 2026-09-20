@@ -1,0 +1,1927 @@
+*,
+*::before,
+*::after,
+html,
+body {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f8f8;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.004em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+a {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+span {
+  font-size: 0.833rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #2c2c54; /* Martinique */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  color: #333;
+}
+
+.important {
+  font-size: 1.56rem;
+  font-weight: 700;
+}
+
+.big {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.bigger {
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.biggest {
+  font-size: 15rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+}
+
+.difference {
+  margin: 12rem 4rem;
+}
+
+.faded {
+  color: #8999aa; /* Generate Faded version for Martinique */
+}
+
+.lighter {
+  color: #828289;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lunasima-regular {
+  font-family: "Lunasima", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lunasima-bold {
+  font-family: "Lunasima", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.almarai-bold {
+  font-family: "Almarai", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.almarai-extrabold {
+  font-family: "Almarai", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* layouts */
+.grid {
+  display: grid;
+}
+
+.grid--3x3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3rem;
+  overflow: hidden;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  text-transform: none;
+}
+
+.btn--primary {
+  background: #e4f4c2;
+}
+
+.btn--secondary {
+  background-color: #2c2c54;
+  color: #e4f4c2;
+}
+
+.btn--accent {
+  border: 1px solid #2c2c54;
+}
+
+/* navigation */
+@media screen and (min-width: 1024px) {
+  .menu {
+    margin: 4rem;
+  }
+
+  .navigation a {
+    margin: 0 0.5rem;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+
+.navigation a {
+  margin: 0 1rem;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .menu-arrow {
+  transform: rotate(180deg);
+}
+
+.menu .desk-nav {
+  display: none;
+}
+
+.navigation .disable {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation .dropdown {
+    display: none;
+  }
+
+  .menu .desk-nav {
+    display: block;
+  }
+
+  .navigation .disable {
+    display: initial;
+  }
+}
+
+/* Main Section */
+.primary-content {
+  margin: 4rem;
+}
+
+.primary-content .first-content {
+  margin: 0 0 0 2rem;
+}
+
+.primary-content,
+.who-we-are,
+.trusted-banner,
+.our-purpose,
+.support-us,
+.happy-families,
+.testimonials {
+  background-image:
+    linear-gradient(#ecece2 1px, transparent 1px),
+    linear-gradient(to right, #ecece2 1px, transparent 1px);
+  background-size: 200px 50px;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+
+.primary-content {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  position: relative;
+}
+
+.primary-content img {
+  object-fit: fill;
+}
+
+.primary-content .primary-svg1 {
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(-50deg);
+  left: 60%;
+  bottom: 60%;
+  position: absolute;
+  z-index: 1;
+}
+
+.primary-content .primary-svg2 {
+  position: absolute;
+  left: 70%;
+  bottom: 20%;
+  width: 35rem;
+}
+
+.primary-content .story {
+  max-width: 50%;
+}
+
+.primary-content .primary-mission,
+.primary-content video {
+  border-radius: 20px;
+}
+
+.primary-content .primary-mission video {
+  width: 18vw;
+}
+
+.primary-content .primary-mission {
+  display: flex;
+  margin: 2rem 0;
+  background-color: #f1f1eac0;
+  padding: 1.5rem;
+  max-width: fit-content;
+  gap: 1rem;
+}
+
+.primary-content video {
+  width: 18vw;
+  flex-shrink: 0;
+}
+
+.primary-content .vid-description {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  margin: auto auto;
+}
+
+.vid-description p {
+  margin-bottom: 0.2rem;
+}
+
+.primary-content .more {
+  max-width: 15vw;
+  padding: 10px 0;
+}
+
+/* Hope section */
+.inspiration {
+  margin-left: 6rem;
+  position: relative;
+}
+
+.inspiration .hope {
+  width: 13rem;
+  object-fit: fill;
+  position: absolute;
+}
+
+.inspiration .hope-first {
+  transform: rotate(40deg);
+  left: 30%;
+  bottom: 80%;
+  z-index: -1;
+}
+
+.inspiration .hope-second {
+  transform: rotate(20deg);
+  left: 70%;
+  bottom: 54%;
+  width: 25rem;
+  z-index: 1;
+}
+
+.inspiration .hope-third {
+  transform: rotate(40deg);
+  left: 9%;
+  bottom: 9%;
+  width: 9rem;
+  z-index: 1;
+}
+
+/* About Page */
+.who-we-are {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.who-we-are .about-photo {
+  object-fit: fill;
+  position: relative;
+  display: inline;
+}
+
+.who-we-are .first {
+  left: 2%;
+  bottom: 110px;
+  width: 29rem;
+  transform: rotate(-8deg);
+}
+
+.who-we-are .second {
+  top: 55px;
+  right: 200px;
+  width: 45rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Trusted Section */
+.trusted-label {
+  text-align: center;
+}
+
+.trusted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  background-color: #e4f4c2a1;
+  border-radius: 2rem;
+  padding: 6rem 5rem;
+  margin: 4rem;
+}
+
+.history {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3rem 1rem 0px;
+}
+
+.history-member {
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.history-member .history-description {
+  margin: 0;
+}
+
+/* Mission Page */
+.contributes,
+.support {
+  text-align: center;
+}
+
+.support-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 14rem;
+}
+
+.contributes {
+  margin-bottom: 2rem;
+}
+
+.mission {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mission-statement {
+  text-align: center;
+}
+
+.mission-picture {
+  object-fit: cover;
+  width: 29rem;
+}
+
+.mission-statement .helped {
+  margin: 1rem 0;
+}
+
+.mission-statement .btn {
+  margin-bottom: 1rem;
+}
+
+.mission-statement .big {
+  margin-bottom: 2rem;
+}
+
+.progress {
+  border-width: 2px;
+  border-radius: 1rem;
+  border-left-color: #2c2c54;
+  text-align: center;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-top-style: none;
+  margin-bottom: 1rem;
+}
+
+.mission-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-right: 1.5rem;
+}
+
+/* Support Us */
+.get-involved {
+  background-color: #e4f4c2a1;
+  margin: 5rem 5rem;
+  padding: 2rem 3rem;
+  border: 2px solid #2c2c54;
+  border-radius: 1rem;
+}
+
+.motive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0;
+  gap: 5rem;
+}
+
+.kids {
+  height: 35rem;
+}
+
+/* Donations Section */
+.give-back {
+  background-color: #e4f4c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.donation-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+.happy-team {
+  height: 3rem;
+}
+
+.team {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Happy Faces Page */
+.happy-parents {
+  text-align: center;
+}
+
+.happy-parents .bigger {
+  margin-bottom: 3rem;
+}
+
+.happy-faces {
+  width: 35rem;
+}
+
+/* Support Team */
+.support-team {
+  padding: 2rem;
+}
+
+.vision {
+  gap: 1rem;
+  text-align: center;
+}
+
+.vision-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.nospace {
+  padding: 0;
+  margin: 0;
+}
+
+.fundraiser-mission {
+  width: 35rem;
+}
+
+.learn-more {
+  margin: 1rem 3rem 0 0;
+}
+
+.giver {
+  margin-bottom: 1rem;
+}
+
+/* ===================================== */
+/* TRAINING SECTION */
+/* ===================================== */
+
+.training-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.training-card {
+  background: #fff;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+
+  transition: 0.35s;
+}
+
+.training-card:hover {
+  transform: translateY(-10px);
+}
+
+.training-card h3 {
+  margin-bottom: 1rem;
+}
+
+.training-card p {
+  margin-bottom: 2rem;
+}
+
+.training-details {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid #eee;
+}
+
+.training-card button {
+  margin-top: 2rem;
+
+  width: 180px;
+}
+
+/* ===================================== */
+/* BENEFICIARY TRACKER */
+/* ===================================== */
+
+.tracker-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.tracker-card {
+  background: #fff;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+.tracker-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid #efefef;
+}
+
+.income-box {
+  display: flex;
+
+  justify-content: space-around;
+
+  text-align: center;
+
+  margin: 2rem 0;
+}
+
+.income-box h4 {
+  font-size: 2.2rem;
+
+  color: #2c2c54;
+
+  margin-bottom: 0.3rem;
+}
+
+.income-box span {
+  font-size: 0.9rem;
+
+  color: #777;
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media (max-width: 900px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tracker-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================== */
+/* TRANSPARENCY */
+/* ===================================== */
+
+.transparency-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 4rem;
+
+  background: #fff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.transparency-table th {
+  background: #2c2c54;
+
+  color: white;
+
+  padding: 18px;
+
+  text-align: left;
+}
+
+.transparency-table td {
+  padding: 18px;
+
+  border-bottom: 1px solid #efefef;
+}
+
+.transparency-table tr:hover {
+  background: #fafafa;
+}
+
+.status {
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-size: 0.85rem;
+
+  font-weight: bold;
+}
+
+.active {
+  background: #e4f4c2;
+}
+
+.complete {
+  background: #c7f9cc;
+}
+
+.pending {
+  background: #ffe8a3;
+}
+
+/* ===================================== */
+/* REPORTS */
+/* ===================================== */
+
+.report-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.report-card {
+  background: #fff;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+
+  transition: 0.35s;
+}
+
+.report-card:hover {
+  transform: translateY(-10px);
+}
+
+.report-card button {
+  margin-top: 2rem;
+}
+
+/* ===================================== */
+/* ADMIN */
+/* ===================================== */
+
+.admin-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.admin-card {
+  background: #fff;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+
+  transition: 0.35s;
+}
+
+.admin-card:hover {
+  transform: translateY(-10px);
+}
+
+.admin-card h3 {
+  font-size: 3rem;
+
+  margin-bottom: 0.5rem;
+
+  color: #2c2c54;
+}
+
+.admin-card span {
+  color: #666;
+}
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+@media (max-width: 900px) {
+  .transparency-table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* IMPACT DASHBOARD */
+/* ============================= */
+
+.impact-dashboard {
+  text-align: center;
+}
+
+.dashboard-title {
+  max-width: 850px;
+  margin: 0 auto 4rem;
+}
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 2rem;
+}
+
+.dashboard-card {
+  background: #fff;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+
+  transition: 0.35s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px);
+}
+
+.dashboard-card h3 {
+  font-size: 3rem;
+
+  color: #2c2c54;
+
+  margin-bottom: 0.6rem;
+}
+
+.dashboard-card span {
+  font-size: 1rem;
+
+  color: #666;
+}
+
+/* ============================= */
+/* PROJECTS */
+/* ============================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+}
+
+.project-card {
+  background: white;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.project-card h4 {
+  margin-bottom: 1rem;
+}
+
+.project-card label {
+  font-weight: bold;
+
+  display: block;
+
+  margin-top: 2rem;
+
+  margin-bottom: 0.7rem;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 12px;
+
+  background: #ddd;
+
+  border-radius: 100px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+
+  background: #2c2c54;
+}
+
+.eighty {
+  width: 80%;
+}
+
+.sixty {
+  width: 60%;
+}
+
+.ninety {
+  width: 90%;
+}
+
+.project-card span {
+  display: block;
+
+  margin-top: 1rem;
+
+  font-weight: bold;
+}
+
+/* ============================= */
+/* LOANS */
+/* ============================= */
+
+.loan-wrapper {
+  display: grid;
+
+  grid-template-columns: 1fr 1.5fr;
+
+  gap: 4rem;
+
+  margin-top: 4rem;
+}
+
+.loan-benefits {
+  background: #e4f4c2;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+}
+
+.loan-benefits ul {
+  padding-left: 20px;
+}
+
+.loan-benefits li {
+  margin-bottom: 1rem;
+}
+
+.loan-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.2rem;
+
+  background: white;
+
+  padding: 2rem;
+
+  border-radius: 20px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.loan-form input,
+.loan-form select,
+.loan-form textarea {
+  border: 1px solid #ddd;
+
+  border-radius: 12px;
+
+  padding: 14px;
+
+  font-size: 1rem;
+
+  font-family: inherit;
+}
+
+.loan-form button {
+  width: 220px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .loan-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Page */
+.final {
+  margin: 0;
+  text-align: center;
+  background-color: #e4f4c2a1;
+  padding: 2rem 6rem;
+}
+
+.base {
+  background-image:
+    linear-gradient(#ecece2 1px, transparent 1px),
+    linear-gradient(to right, #ecece2 1px, transparent 1px);
+  background-size: 200px 50px;
+}
+
+.base-vision {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  margin: 1.8rem 0 0.5rem;
+}
+
+.last-vision {
+  display: flex;
+  justify-content: center;
+}
+
+.final-vision,
+.follow {
+  color: #2c2c54;
+}
+
+.final-vision {
+  width: 75%;
+}
+
+.final-donate {
+  margin-bottom: 2rem 0;
+}
+
+.final-navigation {
+  margin: 2rem;
+}
+
+.final-navigation .capitalize {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-handles {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  margin: 0 0 5rem;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #2c2c54;
+  transition: all 0.3s ease;
+  padding: 2px;
+}
+
+.social-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.follow {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.copy {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   NATAN RESPONSIVE DESIGN
+   Mobile + Tablet
+   ========================================================= */
+
+/* Prevent horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1023px) {
+  /* Global typography */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .bigger {
+    font-size: 3.5rem;
+  }
+
+  .biggest {
+    font-size: 10rem;
+  }
+
+  /* Navigation */
+  .menu {
+    margin: 2rem;
+  }
+
+  .navigation a {
+    margin: 0 0.5rem;
+  }
+
+  /* Main hero */
+  .primary-content {
+    margin: 2rem;
+    height: auto;
+    min-height: 75vh;
+  }
+
+  .primary-content .story {
+    max-width: 60%;
+  }
+
+  .primary-content .primary-svg1 {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .primary-content .primary-svg2 {
+    width: 28rem;
+  }
+
+  /* Sections */
+  .difference {
+    margin: 8rem 2rem;
+  }
+
+  /* About */
+  .who-we-are {
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .who-we-are .first {
+    width: 22rem;
+  }
+
+  .who-we-are .second {
+    width: 35rem;
+    right: auto;
+    top: auto;
+  }
+
+  /* Mission */
+  .support-description {
+    padding: 0 4rem;
+  }
+
+  .mission {
+    gap: 3rem;
+  }
+
+  /* Support */
+  .motive {
+    gap: 2rem;
+  }
+
+  .kids {
+    height: 25rem;
+  }
+
+  /* Fundraisers */
+  .vision-team {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fundraiser-mission {
+    width: 28rem;
+  }
+
+  /* Footer */
+  .final {
+    padding: 2rem;
+  }
+
+  .final-vision {
+    width: 90%;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 767px) {
+  /* ---------------------------------------------------------
+     GLOBAL
+     --------------------------------------------------------- */
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .big {
+    font-size: 1.5rem;
+  }
+
+  .bigger {
+    font-size: 2.4rem;
+    line-height: 1.15;
+  }
+
+  .biggest {
+    font-size: 4.5rem;
+    line-height: 0.95;
+  }
+
+  .difference {
+    margin: 6rem 1rem;
+  }
+
+  /* ---------------------------------------------------------
+     NAVIGATION
+     --------------------------------------------------------- */
+
+  .menu {
+    margin: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .menu > h3 {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  /* Hide desktop-style navigation links */
+  .navigation > a {
+    display: none;
+  }
+
+  /* Keep More menu */
+  .navigation .dropdown {
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    right: 0;
+    left: auto;
+    min-width: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .dropdown-content a {
+    margin: 0;
+    padding: 12px 16px;
+  }
+
+  .menu .desk-nav {
+    display: none;
+  }
+
+  /* ---------------------------------------------------------
+     MAIN / HERO
+     --------------------------------------------------------- */
+
+  .primary-content {
+    display: block;
+    width: auto;
+    margin: 1rem;
+    min-height: auto;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .primary-content .first-content {
+    margin: 0;
+  }
+
+  .primary-content .bigger,
+  .primary-content h1 {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .primary-content .story {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1.5rem;
+    overflow-wrap: break-word;
+  }
+
+  /* Hero artwork */
+  .primary-content .primary-svg1 {
+    position: relative;
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    left: auto;
+    bottom: auto;
+    margin: 1rem auto;
+    transform: rotate(-20deg);
+  }
+
+  .primary-content .primary-svg2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    left: auto;
+    bottom: auto;
+    margin: -2rem auto 1rem;
+  }
+
+  /* Video + description */
+  .primary-content .primary-mission {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem;
+    gap: 1rem;
+    overflow: hidden;
+  }
+
+  .primary-content .primary-mission video,
+  .primary-content video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .primary-content .vid-description {
+    width: 100%;
+    margin: 0;
+  }
+
+  .primary-content .more {
+    max-width: 100%;
+    padding: 5px 0;
+  }
+
+  /* ---------------------------------------------------------
+     HOPE SECTION
+     --------------------------------------------------------- */
+
+  .inspiration {
+    margin: 5rem 1rem;
+    min-height: 35rem;
+    overflow: hidden;
+  }
+
+  .inspiration .hope {
+    max-width: 8rem;
+  }
+
+  .inspiration .hope-first {
+    left: 50%;
+    bottom: 75%;
+  }
+
+  .inspiration .hope-second {
+    left: 50%;
+    bottom: 40%;
+    width: 12rem;
+  }
+
+  .inspiration .hope-third {
+    left: 5%;
+    bottom: 5%;
+    width: 6rem;
+  }
+
+  /* ---------------------------------------------------------
+     ABOUT
+     --------------------------------------------------------- */
+
+  .who-we-are {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .who-we-are .first,
+  .who-we-are .second {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    transform: none;
+  }
+
+  /* ---------------------------------------------------------
+     TRUSTED / HISTORY
+     --------------------------------------------------------- */
+
+  .trusted {
+    margin: 2rem 1rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .history {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .history-member {
+    margin: 0;
+  }
+
+  /* ---------------------------------------------------------
+     MISSION
+     --------------------------------------------------------- */
+
+  .support-description {
+    padding: 0 1rem;
+  }
+
+  .mission {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .mission-picture {
+    width: 100%;
+    max-width: 22rem;
+  }
+
+  .mission-statement {
+    width: 100%;
+  }
+
+  .mission-button {
+    margin: 2rem 0 0;
+  }
+
+  /* ---------------------------------------------------------
+     SUPPORT US
+     --------------------------------------------------------- */
+
+  .get-involved {
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .motive {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .kids {
+    width: 100%;
+    height: auto;
+    max-width: 20rem;
+  }
+
+  /* ---------------------------------------------------------
+     DONATION STRIP
+     --------------------------------------------------------- */
+
+  .give-back {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .donations {
+    width: 100%;
+  }
+
+  .donation-item {
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .team {
+    font-size: 1rem;
+  }
+
+  .happy-team {
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  /* ---------------------------------------------------------
+     HAPPY FACES
+     --------------------------------------------------------- */
+
+  .happy-families {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .grid--3x3 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .happy-faces {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  /* ---------------------------------------------------------
+     TRAINING
+     --------------------------------------------------------- */
+
+  .training-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .training-card {
+    padding: 1.5rem;
+  }
+
+  .training-details {
+    gap: 1rem;
+  }
+
+  .training-details strong {
+    text-align: right;
+  }
+
+  .training-card button {
+    width: 100%;
+  }
+
+  /* ---------------------------------------------------------
+     TRACKER
+     --------------------------------------------------------- */
+
+  .tracker-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .tracker-card {
+    padding: 1.5rem;
+  }
+
+  .tracker-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .income-box {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* ---------------------------------------------------------
+     TRANSPARENCY
+     --------------------------------------------------------- */
+
+  .transparency-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .transparency-table th,
+  .transparency-table td {
+    padding: 12px;
+  }
+
+  /* ---------------------------------------------------------
+     REPORTS
+     --------------------------------------------------------- */
+
+  .report-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .report-card {
+    padding: 1.5rem;
+  }
+
+  /* ---------------------------------------------------------
+     ADMIN / DASHBOARD
+     --------------------------------------------------------- */
+
+  .admin-grid,
+  .dashboard-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .admin-card,
+  .dashboard-card,
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .admin-card h3,
+  .dashboard-card h3 {
+    font-size: 2.5rem;
+  }
+
+  .dashboard-title {
+    margin-bottom: 2rem;
+  }
+
+  /* ---------------------------------------------------------
+     LOANS
+     --------------------------------------------------------- */
+
+  .loan-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .loan-benefits,
+  .loan-form {
+    padding: 1.5rem;
+  }
+
+  .loan-form input,
+  .loan-form select,
+  .loan-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .loan-form button {
+    width: 100%;
+  }
+
+  /* ---------------------------------------------------------
+     FUNDRAISERS
+     --------------------------------------------------------- */
+
+  .vision-team {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .sponsor {
+    width: 100%;
+  }
+
+  .fundraiser-mission {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .learn-more {
+    margin: 2rem 0 0;
+  }
+
+  /* ---------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------- */
+
+  .final {
+    padding: 2rem 1rem;
+  }
+
+  .base {
+    background-size: 80px 30px;
+  }
+
+  .base-vision {
+    margin-top: 1rem;
+  }
+
+  .last-vision {
+    padding: 0 0.5rem;
+  }
+
+  .final-vision {
+    width: 100%;
+  }
+
+  .final-navigation {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .final-navigation .capitalize {
+    padding: 0 0.25rem;
+  }
+
+  .social-handles {
+    margin-bottom: 3rem;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+  .menu {
+    margin: 1rem 0.75rem;
+  }
+
+  .menu > h3 {
+    font-size: 1.3rem;
+  }
+
+  .primary-content {
+    padding: 0.75rem;
+  }
+
+  .primary-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .bigger {
+    font-size: 2.1rem;
+  }
+
+  .biggest {
+    font-size: 3.8rem;
+  }
+
+  .difference {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .training-card,
+  .tracker-card,
+  .report-card,
+  .admin-card,
+  .dashboard-card,
+  .project-card,
+  .loan-form,
+  .loan-benefits {
+    padding: 1.2rem;
+  }
+}

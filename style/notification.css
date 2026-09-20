@@ -1,0 +1,80 @@
+/* ====================================
+   ALLCARE NOTIFICATIONS
+==================================== */
+
+#notificationContainer {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999999;
+}
+
+#notificationContainer .notification {
+  min-width: 320px;
+  padding: 18px 24px;
+  border-radius: 12px;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700 !important;
+  line-height: 1.4;
+  box-sizing: border-box;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateX(100px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+#notificationContainer .notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SUCCESS */
+#notificationContainer .notification.notification-success {
+  background: #27ae60 !important;
+  background-color: #27ae60 !important;
+  color: #ffffff !important;
+}
+
+/* ERROR */
+#notificationContainer .notification.notification-error {
+  background: #e74c3c !important;
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+
+/* WARNING */
+#notificationContainer .notification.notification-warning {
+  background: #f39c12 !important;
+  background-color: #f39c12 !important;
+  color: #ffffff !important;
+}
+
+/* INFO */
+#notificationContainer .notification.notification-info {
+  background: #3498db !important;
+  background-color: #3498db !important;
+  color: #ffffff !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+  #notificationContainer {
+    top: 15px;
+    right: 15px;
+    left: 15px;
+  }
+
+  #notificationContainer .notification {
+    min-width: 0;
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 0.9rem;
+  }
+}

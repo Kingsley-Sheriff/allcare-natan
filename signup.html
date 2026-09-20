@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Create Account | ALLCARE</title>
+
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/signup.css" />
+    <link rel="stylesheet" href="style/notification.css" />
+  </head>
+
+  <body>
+    <section class="signup-page">
+      <article class="signup-left">
+        <h1>Join ALLCARE</h1>
+
+        <p>
+          Create your free account to support projects, track donations and stay
+          connected with our community.
+        </p>
+      </article>
+
+      <article class="signup-right">
+        <div class="signup-card">
+          <h2>Create Account</h2>
+
+          <form id="signupForm" novalidate>
+            <input
+              type="text"
+              id="signupName"
+              placeholder="Full Name"
+              required
+            />
+
+            <input
+              type="email"
+              id="signupEmail"
+              placeholder="Email Address"
+              required
+            />
+
+            <input
+  type="tel"
+  id="signupPhone"
+  placeholder="Phone Number"
+  inputmode="numeric"
+  maxlength="12"
+  autocomplete="tel"
+  required
+/>
+
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Password"
+              minlength="8"
+              maxlength="128"
+              required
+            />
+
+            <input
+              type="password"
+              id="signupConfirmPassword"
+              placeholder="Confirm Password"
+              required
+            />
+
+            <label class="checkbox">
+              <input type="checkbox" id="terms" required />
+
+              I agree to the Terms & Conditions
+            </label>
+
+            <button type="submit" class="signup-btn">Create Account</button>
+          </form>
+
+          <p class="login-link">
+            Already have an account?
+
+            <a href="login.html"> Login </a>
+          </p>
+        </div>
+      </article>
+    </section>
+    <script src="js/notification.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>

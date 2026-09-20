@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | ALLCARE</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/donation.css" />
+    <link rel="stylesheet" href="style/notification.css" />
+  </head>
+  <body>
+    <section class="donation-page">
+      <article class="donation-left">
+        <h1>Support A Family Today</h1>
+        <p>
+          Every donation helps empower single parents through education,
+          employment, healthcare and entrepreneurship.
+        </p>
+      </article>
+      <article class="donation-right">
+        <div class="donation-card">
+          <h2>Make A Donation</h2>
+          <form id="donationForm">
+            <input type="hidden" id="donationType" value="One-Time" />
+            <div class="amount-grid">
+              <button type="button" class="amount-btn" data-amount="50">
+                GHS 50
+              </button>
+              <button type="button" class="amount-btn" data-amount="100">
+                GHS 100
+              </button>
+              <button type="button" class="amount-btn" data-amount="250">
+                GHS 250
+              </button>
+              <button type="button" class="amount-btn" data-amount="350">
+                GHS 350
+              </button>
+            </div>
+            <input
+              type="number"
+              id="donationAmount"
+              min="1"
+              step="0.01"
+              placeholder="Amount"
+            />
+            <input
+              type="text"
+              id="donorName"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="email"
+              id="donorEmail"
+              placeholder="Email Address"
+              required
+            />
+            <div id="mobileMoneyFields">
+              <input
+                type="tel"
+                id="mobileMoneyPhone"
+                placeholder="e.g. 0551234567"
+                inputmode="numeric"
+                autocomplete="tel"
+                required
+              />
+              <select id="mobileMoneyProvider" required>
+                <option value="">Select Mobile Money Network</option>
+                <option value="mtn">MTN</option>
+                <option value="atl">AirtelTigo</option>
+                <option value="vod">Telecel</option>
+              </select>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" id="anonymous" />
+              Donate Anonymously
+            </label>
+            <button class="donate-btn" type="submit">Donate Now</button>
+          </form>
+        </div>
+      </article>
+    </section>
+    <script src="js/notification.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+      Auth.requireLogin();
+    </script>
+    <script src="js/donation.js"></script>
+  </body>
+</html>

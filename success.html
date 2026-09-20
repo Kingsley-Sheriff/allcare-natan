@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Donation Successful | ALLCARE</title>
+
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/success.css" />
+    <link rel="stylesheet" href="style/notification.css" />
+  </head>
+
+  <body>
+    <section class="success-page">
+      <article class="success-card">
+        <div class="success-icon">✓</div>
+
+        <h1>Thank You!</h1>
+
+        <p>
+          Your donation has been received successfully. Together we are changing
+          lives.
+        </p>
+
+        <div class="receipt">
+          <div class="receipt-row">
+            <span>Reference</span>
+
+            <strong id="receiptReference"> - </strong>
+          </div>
+
+          <div class="receipt-row">
+            <span>Donor</span>
+
+            <strong id="receiptName"> - </strong>
+          </div>
+
+          <div class="receipt-row">
+            <span>Amount</span>
+
+            <strong id="receiptAmount"> - </strong>
+          </div>
+
+          <div class="receipt-row">
+            <span>Donation Type</span>
+
+            <strong id="receiptType"> - </strong>
+          </div>
+
+          <div class="receipt-row">
+            <span>Payment Method</span>
+
+            <strong id="receiptPayment"> - </strong>
+          </div>
+
+          <div class="receipt-row">
+            <span>Date</span>
+
+            <strong id="receiptDate"> - </strong>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button id="printReceipt" class="primary-btn">Print Receipt</button>
+
+          <button id="donateAgain" class="secondary-btn">Donate Again</button>
+
+          <button id="returnHome" class="secondary-btn">Return Home</button>
+        </div>
+      </article>
+    </section>
+    <script src="js/auth.js"></script>
+    <script>
+        Auth.requireLogin();
+    </script>
+    <script src="js/success.js"></script>
+  </body>
+</html>

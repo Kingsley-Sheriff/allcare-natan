@@ -143,7 +143,7 @@ const Signup = {
            ========================================== */
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/signup", {
         method: "POST",
 
         headers: {

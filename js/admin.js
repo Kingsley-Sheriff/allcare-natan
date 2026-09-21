@@ -63,7 +63,7 @@ const Admin = {
 
   async loadStatistics() {
     try {
-      const response = await fetch("http://localhost:3000/dashboard/stats");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/dashboard/stats");
 
       if (!response.ok) {
         throw new Error("Failed to load dashboard statistics");
@@ -127,7 +127,7 @@ const Admin = {
     if (!tbody) return;
 
     try {
-      const response = await fetch("http://localhost:3000/users");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/users");
 
       if (!response.ok) {
         throw new Error("Failed to load users");
@@ -200,7 +200,7 @@ const Admin = {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/users", {
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -249,7 +249,7 @@ const Admin = {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/users/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -293,7 +293,7 @@ const Admin = {
     if (!tbody) return;
 
     try {
-      const response = await fetch("http://localhost:3000/trackers");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/trackers");
 
       if (!response.ok) {
         throw new Error("Failed to load beneficiaries");
@@ -363,7 +363,7 @@ const Admin = {
     if (!tbody) return;
 
     try {
-      const response = await fetch("http://localhost:3000/loans");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/loans");
 
       if (!response.ok) {
         throw new Error("Failed to load loans");
@@ -449,7 +449,7 @@ const Admin = {
     if (!tbody) return;
 
     try {
-      const response = await fetch("http://localhost:3000/projects");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/projects");
 
       if (!response.ok) {
         throw new Error("Failed to load projects");
@@ -527,7 +527,7 @@ const Admin = {
     if (!tbody) return;
 
     try {
-      const response = await fetch("http://localhost:3000/trainings");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/trainings");
 
       if (!response.ok) {
         throw new Error("Failed to load trainings");
@@ -599,7 +599,7 @@ const Admin = {
     if (!confirm("Delete this beneficiary?")) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/trackers/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/trackers/${id}`, {
         method: "DELETE",
       });
 
@@ -637,7 +637,7 @@ const Admin = {
     if (businessStarted === null) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/trackers/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/trackers/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -707,7 +707,7 @@ const Admin = {
   async deleteLoan(id) {
     if (!confirm("Delete this loan application?")) return;
     try {
-      const response = await fetch(`http://localhost:3000/loans/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/loans/${id}`, {
         method: "DELETE",
       });
       const result = await response.json();
@@ -739,7 +739,7 @@ const Admin = {
     if (status === null) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/loans/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/loans/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -774,7 +774,7 @@ const Admin = {
     if (!confirm("Delete this project?")) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/projects/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/projects/${id}`, {
         method: "DELETE",
       });
 
@@ -812,7 +812,7 @@ const Admin = {
     if (status === null) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/projects/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/projects/${id}`, {
         method: "PUT",
 
         headers: {
@@ -850,7 +850,7 @@ const Admin = {
     if (!confirm("Delete this training record?")) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/trainings/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/trainings/${id}`, {
         method: "DELETE",
       });
 
@@ -882,7 +882,7 @@ const Admin = {
     if (status === null) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/trainings/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/trainings/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -915,7 +915,7 @@ const Admin = {
     if (!confirm("Approve this loan application?")) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/loans/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/loans/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -946,7 +946,7 @@ const Admin = {
     if (!confirm("Reject this loan application?")) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/loans/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/loans/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -1032,7 +1032,7 @@ const Admin = {
     if (!container) return;
 
     try {
-      const response = await fetch("http://localhost:3000/notifications");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/notifications");
 
       if (!response.ok) {
         throw new Error("Failed to load notifications");
@@ -1112,7 +1112,7 @@ EXPORT CSV
 ========================================== */
   async exportCSV() {
     try {
-      const response = await fetch("http://localhost:3000/reports/export-data");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/reports/export-data");
 
       if (!response.ok) {
         throw new Error("Failed to export CSV data");
@@ -1169,7 +1169,7 @@ EXPORT JSON
 ========================================== */
   async exportJSON() {
     try {
-      const response = await fetch("http://localhost:3000/reports/backup");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/reports/backup");
 
       if (!response.ok) {
         throw new Error("Failed to create backup");
@@ -1207,7 +1207,7 @@ RESTORE JSON
       try {
         const data = JSON.parse(event.target.result);
 
-        const response = await fetch("http://localhost:3000/reports/restore", {
+        const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/reports/restore", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -1234,7 +1234,7 @@ RESTORE JSON
 
   async editUser(id) {
     try {
-      const response = await fetch(`http://localhost:3000/users`);
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/users`);
 
       if (!response.ok) {
         throw new Error("Failed to load user");
@@ -1270,7 +1270,7 @@ RESTORE JSON
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:3000/users/${id}`, {
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/users/${id}`, {
         method: "DELETE",
       });
 

@@ -7,7 +7,7 @@ document.querySelectorAll(".report-btn").forEach((button) => {
 
       button.textContent = "Generating...";
 
-      const response = await fetch(`http://localhost:3000/reports/${type}`);
+      const response = await fetch(`https://allcare-natan-production-72e6.up.railway.app/reports/${type}`);
 
       const result = await response.json();
 

@@ -84,7 +84,7 @@ const Login = {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/login",
+                "https://allcare-natan-production-72e6.up.railway.app/login",
                 {
                     method: "POST",
 

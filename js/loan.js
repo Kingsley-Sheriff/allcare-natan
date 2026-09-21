@@ -35,7 +35,7 @@ const Loan = {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/loans", {
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/loans", {
         method: "POST",
 
         headers: {

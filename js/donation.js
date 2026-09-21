@@ -135,7 +135,7 @@ const Donation = {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/donations/mobile-money",
+        "https://allcare-natan-production-72e6.up.railway.app/donations/mobile-money",
         {
           method: "POST",
 
@@ -197,7 +197,7 @@ const Donation = {
       await new Promise((resolve) => setTimeout(resolve, 5000));
 
       const response = await fetch(
-        `http://localhost:3000/donations/verify/${encodeURIComponent(reference)}`,
+        `https://allcare-natan-production-72e6.up.railway.app/donations/verify/${encodeURIComponent(reference)}`,
       );
 
       const result = await response.json();

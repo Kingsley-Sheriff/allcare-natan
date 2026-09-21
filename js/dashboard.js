@@ -1,7 +1,7 @@
 
 async function loadDashboardStats() {
     try {
-        const response = await fetch("http://localhost:3000/dashboard/stats");
+        const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/dashboard/stats");
         const stats = await response.json();
         document.getElementById("adminBeneficiaries").textContent = stats.beneficiaries;
         document.getElementById("adminLoans").textContent = stats.loans;

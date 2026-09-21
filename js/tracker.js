@@ -142,7 +142,7 @@ const Tracker = {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/trackers",
+                "https://allcare-natan-production-72e6.up.railway.app/trackers",
                 {
                     method: "POST",
 
@@ -208,7 +208,7 @@ const Tracker = {
         try {
 
             const response = await fetch(
-                "http://localhost:3000/trackers"
+                "https://allcare-natan-production-72e6.up.railway.app/trackers"
             );
 
 

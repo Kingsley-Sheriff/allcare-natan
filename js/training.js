@@ -14,7 +14,7 @@ const Training = {
   },
   async enroll(course) {
     try {
-      const response = await fetch("http://localhost:3000/trainings", {
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/trainings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

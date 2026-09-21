@@ -104,7 +104,7 @@ const Projects = {
     // ==============================
 
     try {
-      const response = await fetch("http://localhost:3000/projects", {
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/projects", {
         method: "POST",
 
         headers: {
@@ -149,7 +149,7 @@ const Projects = {
     if (!container) return;
 
     try {
-      const response = await fetch("http://localhost:3000/projects");
+      const response = await fetch("https://allcare-natan-production-72e6.up.railway.app/projects");
 
       if (!response.ok) {
         throw new Error("Failed to load projects.");

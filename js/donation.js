@@ -165,8 +165,11 @@ const Donation = {
       // ==========================================
 
       Notification.info(
-        `Check your ${mobileMoneyProvider.toUpperCase()} Mobile Money phone to complete the donation.`,
+        data.display_text ||
+        `Please check your ${mobileMoneyProvider.toUpperCase()} Mobile Money phone to complete the donation.`,
       );
+
+      await this.waitForPayment(data.reference);
 
       // ==========================================
       // WAIT FOR PAYMENT

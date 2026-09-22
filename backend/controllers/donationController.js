@@ -201,13 +201,14 @@ exports.startMobileMoneyPayment = async (req, res) => {
 
     const paystackData = await paystackResponse.json();
 
-    if (!paystackResponse.ok || !paystackData.status) {
-      console.error("Paystack charge error:", paystackData);
+    if (!paystackResponse.ok || paystackData.status !== true) {
+        console.error("Paystack charge error:", paystackData);
 
-      return res.status(400).json({
+        return res.status(400).json({
         success: false,
-        message:
-          paystackData.message || "Unable to start Mobile Money payment.",
+        message: "Unable to start Mobile Money payment.",
+        paystack_status: paystackData.status,
+        paystack_message: paystackData.message,
       });
     }
 
